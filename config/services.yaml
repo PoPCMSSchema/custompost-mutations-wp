@@ -1,0 +1,4 @@
+services:
+    PoPSchema\CustomPostMutations\TypeAPIs\CustomPostTypeAPIInterface:
+        class: \PoPSchema\CustomPostMutationsWP\TypeAPIs\CustomPostTypeAPI
+        public: true
