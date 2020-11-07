@@ -31,10 +31,6 @@ class CustomPostTypeAPI implements CustomPostTypeAPIInterface
             $query['post_title'] = $query['post-title'];
             unset($query['post-title']);
         }
-        if (isset($query['post-categories'])) {
-            $query['post_category'] = $query['post-categories'];
-            unset($query['post-categories']);
-        }
         if (isset($query['custom-post-type'])) {
             $query['post_type'] = $query['custom-post-type'];
             unset($query['custom-post-type']);
