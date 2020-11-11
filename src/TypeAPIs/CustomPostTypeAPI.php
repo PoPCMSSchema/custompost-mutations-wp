@@ -15,25 +15,25 @@ class CustomPostTypeAPI implements CustomPostTypeAPIInterface
     protected function convertQueryArgsFromPoPToCMSForInsertUpdatePost(array &$query): void
     {
         // Convert the parameters
-        if (isset($query['custom-post-status'])) {
-            $query['post_status'] = CustomPostTypeAPIUtils::convertPostStatusFromPoPToCMS($query['custom-post-status']);
-            unset($query['custom-post-status']);
+        if (isset($query['status'])) {
+            $query['post_status'] = CustomPostTypeAPIUtils::convertPostStatusFromPoPToCMS($query['status']);
+            unset($query['status']);
         }
         if (isset($query['id'])) {
             $query['ID'] = $query['id'];
             unset($query['id']);
         }
-        if (isset($query['post-content'])) {
-            $query['post_content'] = $query['post-content'];
-            unset($query['post-content']);
+        if (isset($query['content'])) {
+            $query['post_content'] = $query['content'];
+            unset($query['content']);
         }
-        if (isset($query['custompost-title'])) {
-            $query['post_title'] = $query['custompost-title'];
-            unset($query['custompost-title']);
+        if (isset($query['title'])) {
+            $query['post_title'] = $query['title'];
+            unset($query['title']);
         }
-        if (isset($query['custom-post-type'])) {
-            $query['post_type'] = $query['custom-post-type'];
-            unset($query['custom-post-type']);
+        if (isset($query['custompost-type'])) {
+            $query['post_type'] = $query['custompost-type'];
+            unset($query['custompost-type']);
         }
     }
     /**
