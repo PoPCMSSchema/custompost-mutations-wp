@@ -13,6 +13,7 @@ class LooseContractResolutionSet extends AbstractLooseContractResolutionSet
     {
         $this->nameResolver->implementNames([
             LooseContractSet::NAME_EDIT_POSTS_CAPABILITY => 'edit_posts',
+            LooseContractSet::NAME_PUBLISH_POSTS_CAPABILITY => 'publish_posts',
         ]);
     }
 }
