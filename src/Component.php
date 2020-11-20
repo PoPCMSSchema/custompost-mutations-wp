@@ -6,6 +6,7 @@ namespace PoPSchema\CustomPostMutationsWP;
 
 use PoP\Root\Component\AbstractComponent;
 use PoP\Root\Component\YAMLServicesTrait;
+use PoP\ComponentModel\Container\ContainerBuilderUtils;
 
 /**
  * Initialize component
@@ -43,5 +44,18 @@ class Component extends AbstractComponent
     ): void {
         parent::doInitialize($configuration, $skipSchema, $skipSchemaComponentClasses);
         self::initYAMLServices(dirname(__DIR__));
+    }
+
+    /**
+     * Boot component
+     *
+     * @return void
+     */
+    public static function beforeBoot(): void
+    {
+        parent::beforeBoot();
+
+        // Initialize classes
+        ContainerBuilderUtils::instantiateNamespaceServices(__NAMESPACE__ . '\\LooseContracts');
     }
 }
