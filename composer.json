@@ -21,7 +21,8 @@
         "php": "~7.4",
         "pop-schema/custompost-mutations": "dev-master",
         "pop-schema/customposts-wp": "dev-master",
-        "pop-schema/user-state-wp": "dev-master"
+        "pop-schema/user-state-wp": "dev-master",
+        "pop-schema/user-roles-wp": "dev-master"
     },
     "require-dev": {
         "phpunit/phpunit": ">=9.3",

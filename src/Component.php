@@ -26,6 +26,7 @@ class Component extends AbstractComponent
             \PoPSchema\CustomPostMutations\Component::class,
             \PoPSchema\CustomPostsWP\Component::class,
             \PoPSchema\UserStateWP\Component::class,
+            \PoPSchema\UserRolesWP\Component::class,
         ];
     }
 
