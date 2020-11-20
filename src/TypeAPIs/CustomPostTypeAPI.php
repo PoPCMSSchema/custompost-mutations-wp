@@ -56,4 +56,8 @@ class CustomPostTypeAPI implements CustomPostTypeAPIInterface
         $this->convertQueryArgsFromPoPToCMSForInsertUpdatePost($data);
         return \wp_update_post($data);
     }
+    public function canUserEditCustomPost($userID, $customPostID): bool
+    {
+        return \user_can($userID, 'edit_post', $customPostID);
+    }
 }
